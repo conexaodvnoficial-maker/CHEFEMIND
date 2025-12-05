@@ -31,7 +31,6 @@ const Header: React.FC = () => {
           </div>
           <span className="text-xl md:text-2xl font-display font-bold tracking-tight text-white">
             CHEFE<span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-orange-500">MIND</span>
-            <span className="text-[10px] ml-1 px-1.5 py-0.5 rounded border border-brand-900 bg-brand-950 text-brand-400 font-mono align-top hidden sm:inline-block">PRO</span>
           </span>
         </div>
 
