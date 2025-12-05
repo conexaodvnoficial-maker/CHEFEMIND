@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-import { Check, ShieldCheck, Zap, Award } from 'lucide-react';
+import { Check, ShieldCheck, ChefHat } from 'lucide-react';
 
 const Pricing: React.FC = () => {
   const handleHireWhatsApp = () => {
@@ -35,10 +35,19 @@ const Pricing: React.FC = () => {
             </div>
             
             <div className="p-10 text-center border-b border-slate-800 bg-slate-900/50 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl mx-auto mb-6 flex items-center justify-center border border-slate-700 shadow-inner group-hover:border-brand-500/50 transition-colors">
-                <Zap className="text-brand-500 w-8 h-8 fill-brand-500/20" />
+              {/* Logo Container */}
+              <div className="w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl mx-auto mb-4 flex items-center justify-center border border-slate-700 shadow-inner group-hover:border-brand-500/50 transition-colors">
+                <ChefHat className="text-brand-500 w-8 h-8" />
               </div>
-              <h3 className="text-xl font-display font-bold text-white mb-2 tracking-wide">Plano Profissional</h3>
+              
+              {/* Logo Text */}
+              <div className="mb-4">
+                 <span className="text-lg font-display font-bold tracking-tight text-white">
+                    CHEFE<span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-orange-500">MIND</span>
+                 </span>
+              </div>
+
+              <h3 className="text-xl font-display font-bold text-slate-300 mb-2 tracking-wide uppercase text-sm">Plano Profissional</h3>
               
               <div className="flex items-center justify-center gap-1 mb-4">
                 <span className="text-slate-500 text-lg mt-2">R$</span>
