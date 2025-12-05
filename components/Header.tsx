@@ -20,25 +20,32 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <header className={`fixed top-0 w-full z-50 transition-all duration-500 border-b ${isScrolled ? 'bg-slate-950/90 backdrop-blur-md border-slate-800 py-3' : 'bg-transparent border-transparent py-6'}`}>
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
-        <div className="flex items-center gap-2 group cursor-pointer">
-          <div className="bg-gradient-to-br from-brand-700 to-brand-900 p-2 rounded-xl shadow-lg group-hover:shadow-brand-700/40 transition-shadow">
-            <ChefHat className="text-white w-6 h-6 md:w-8 md:h-8" strokeWidth={2.5} />
+        <div className="flex items-center gap-3 group cursor-pointer">
+          <div className="relative">
+            <div className="absolute inset-0 bg-brand-600 blur-lg opacity-50 group-hover:opacity-100 transition-opacity rounded-full"></div>
+            <div className="relative bg-slate-900 border border-slate-700 p-2 rounded-xl">
+              <ChefHat className="text-brand-500 w-6 h-6" strokeWidth={2} />
+            </div>
           </div>
-          <span className={`text-xl md:text-2xl font-bold tracking-tight ${isScrolled ? 'text-slate-800' : 'text-slate-900'}`}>
-            Chefe<span className="text-brand-700">Mind</span>
+          <span className="text-xl md:text-2xl font-display font-bold tracking-tight text-white">
+            CHEFE<span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-orange-500">MIND</span>
+            <span className="text-[10px] ml-1 px-1.5 py-0.5 rounded border border-brand-900 bg-brand-950 text-brand-400 font-mono align-top hidden sm:inline-block">PRO</span>
           </span>
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#features" className="text-slate-600 hover:text-brand-700 font-medium transition-colors">Funcionalidades</a>
-          <a href="#results" className="text-slate-600 hover:text-brand-700 font-medium transition-colors">Resultados</a>
-          <Button onClick={handleWhatsApp} size="sm">Começar Agora</Button>
+          <a href="#features" className="text-slate-400 hover:text-white text-sm font-medium transition-colors uppercase tracking-wide">Recursos</a>
+          <a href="#results" className="text-slate-400 hover:text-white text-sm font-medium transition-colors uppercase tracking-wide">Resultados</a>
+          <a href="#pricing" className="text-slate-400 hover:text-white text-sm font-medium transition-colors uppercase tracking-wide">Planos</a>
+          <Button onClick={handleWhatsApp} size="sm" variant="primary" className="shadow-none hover:shadow-lg">
+             Falar no WhatsApp
+          </Button>
         </nav>
 
         <div className="md:hidden">
-           <Button onClick={handleWhatsApp} size="sm">Assinar</Button>
+           <Button onClick={handleWhatsApp} size="sm" variant="primary">Contratar</Button>
         </div>
       </div>
     </header>

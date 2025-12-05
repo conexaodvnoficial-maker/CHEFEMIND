@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-import { Check, ShieldCheck } from 'lucide-react';
+import { Check, ShieldCheck, Zap, Award } from 'lucide-react';
 
 const Pricing: React.FC = () => {
   const handleHireWhatsApp = () => {
@@ -10,75 +10,93 @@ const Pricing: React.FC = () => {
   };
 
   return (
-    <section id="pricing" className="py-24 bg-slate-50">
-      <div className="container mx-auto px-4 md:px-8">
+    <section id="pricing" className="py-24 bg-slate-950 relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-900/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Uma Oferta Irrecusável
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            Investimento Inteligente
           </h2>
-          <p className="text-lg text-slate-600">
-            Transforme seu delivery hoje mesmo por um valor menor que o salário de um atendente estagiário.
+          <p className="text-slate-400 text-lg">
+            Substitua custos variáveis com funcionários por uma mensalidade fixa e previsível.
           </p>
         </div>
 
-        <div className="max-w-lg mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200 relative">
-          <div className="absolute top-0 right-0 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-            MAIS POPULAR
-          </div>
+        {/* Cyber Card Container */}
+        <div className="max-w-md mx-auto relative group">
+          {/* Animated Glow Border */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-brand-600 to-orange-600 rounded-3xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
           
-          <div className="p-8 md:p-10 text-center border-b border-slate-100 bg-gradient-to-b from-white to-slate-50">
-            <h3 className="text-xl font-semibold text-slate-600 mb-2">Plano Profissional</h3>
-            <h4 className="text-3xl font-bold text-slate-900 mb-6">Chefe Mind</h4>
-            
-            <div className="flex items-center justify-center gap-1 mb-2">
-              <span className="text-slate-400 text-lg">R$</span>
-              <span className="text-5xl md:text-6xl font-extrabold text-brand-700 tracking-tight">499,79</span>
-              <span className="text-slate-400 text-lg self-end mb-2">/mês</span>
+          <div className="relative bg-slate-900 rounded-3xl overflow-hidden border border-slate-700 h-full flex flex-col">
+            <div className="absolute top-0 right-0 bg-gradient-to-l from-brand-600 to-orange-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl font-mono tracking-wider shadow-lg">
+              OFERTA EXCLUSIVA
             </div>
-            <p className="text-slate-500 text-sm">Cancele quando quiser</p>
-          </div>
-
-          <div className="p-8 md:p-10">
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-start gap-3">
-                <div className="bg-green-100 p-1 rounded-full mt-0.5">
-                  <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
-                </div>
-                <span className="text-slate-700 font-medium">Instalação completa do sistema</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="bg-green-100 p-1 rounded-full mt-0.5">
-                  <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
-                </div>
-                <span className="text-slate-700 font-medium">Personalização (Nome e Logo)</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="bg-green-100 p-1 rounded-full mt-0.5">
-                  <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
-                </div>
-                <span className="text-slate-700 font-medium">Treinamento rápido (10 min)</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="bg-green-100 p-1 rounded-full mt-0.5">
-                  <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
-                </div>
-                <span className="text-slate-700 font-medium">Suporte Técnico Prioritário</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="bg-green-100 p-1 rounded-full mt-0.5">
-                  <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
-                </div>
-                <span className="text-slate-700 font-medium">Atualizações Mensais Inclusas</span>
-              </li>
-            </ul>
-
-            <Button onClick={handleHireWhatsApp} size="lg" fullWidth className="text-lg shadow-xl shadow-brand-700/20">
-              Quero Contratar Agora
-            </Button>
             
-            <div className="mt-6 flex items-center justify-center gap-2 text-sm text-slate-500">
-              <ShieldCheck className="w-4 h-4 text-brand-600" />
-              <span>Pagamento seguro e garantia de satisfação</span>
+            <div className="p-10 text-center border-b border-slate-800 bg-slate-900/50 backdrop-blur-sm">
+              <div className="w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl mx-auto mb-6 flex items-center justify-center border border-slate-700 shadow-inner group-hover:border-brand-500/50 transition-colors">
+                <Zap className="text-brand-500 w-8 h-8 fill-brand-500/20" />
+              </div>
+              <h3 className="text-xl font-display font-bold text-white mb-2 tracking-wide">Plano Profissional</h3>
+              
+              <div className="flex items-center justify-center gap-1 mb-4">
+                <span className="text-slate-500 text-lg mt-2">R$</span>
+                <span className="text-6xl font-display font-bold text-white tracking-tighter drop-shadow-lg">499</span>
+                <div className="flex flex-col items-start">
+                    <span className="text-xl font-bold text-slate-300">,79</span>
+                    <span className="text-xs text-slate-500 font-mono uppercase">/mês</span>
+                </div>
+              </div>
+              
+              <div className="inline-block bg-green-500/10 border border-green-500/20 px-3 py-1 rounded-full">
+                <p className="text-green-400 text-xs font-bold uppercase tracking-wider">Sem taxa de adesão hoje</p>
+              </div>
+            </div>
+
+            <div className="p-10 bg-slate-900 flex-grow flex flex-col">
+              <ul className="space-y-5 mb-10 flex-grow">
+                {[
+                  "Atendimento Ilimitado via WhatsApp",
+                  "Cardápio Digital com Fotos",
+                  "Link de Pagamento Automático",
+                  "Painel de Controle Financeiro",
+                  "Suporte Técnico Prioritário"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="bg-brand-500/20 p-1 rounded-full mt-0.5 shrink-0">
+                      <Check className="w-3 h-3 text-brand-500" strokeWidth={4} />
+                    </div>
+                    <span className="text-slate-200 font-medium text-sm">{item}</span>
+                  </li>
+                ))}
+                
+                {/* Bônus */}
+                <li className="pt-4 mt-4 border-t border-slate-800">
+                    <span className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2 block">Bônus Incluso:</span>
+                    <div className="flex items-start gap-3">
+                        <div className="bg-orange-500/20 p-1 rounded-full mt-0.5 shrink-0">
+                            <Check className="w-3 h-3 text-orange-500" strokeWidth={4} />
+                        </div>
+                        <span className="text-white font-medium text-sm">Setup + Treinamento da Equipe</span>
+                    </div>
+                </li>
+              </ul>
+
+              <Button onClick={handleHireWhatsApp} size="lg" fullWidth variant="primary" className="mb-6 shadow-xl hover:shadow-brand-500/40">
+                Contratar Agora
+              </Button>
+              
+              <div className="flex items-center justify-center gap-4 text-xs text-slate-500 font-mono pt-4 border-t border-slate-800/50">
+                <div className="flex items-center gap-1.5">
+                    <ShieldCheck className="w-4 h-4 text-slate-400" />
+                    <span>Compra Segura</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                    <Award className="w-4 h-4 text-slate-400" />
+                    <span>Sem Fidelidade</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
