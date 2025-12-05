@@ -53,8 +53,6 @@ const Hero: React.FC = () => {
             </div>
             <div className="hidden sm:block w-1 h-1 bg-slate-700 rounded-full"></div>
             <div>Setup em 10 min</div>
-             <div className="hidden sm:block w-1 h-1 bg-slate-700 rounded-full"></div>
-            <div>Sem Fidelidade</div>
         </div>
 
         {/* Tech Specs Bar */}

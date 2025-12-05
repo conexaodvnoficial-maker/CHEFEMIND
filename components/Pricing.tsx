@@ -92,10 +92,6 @@ const Pricing: React.FC = () => {
                     <ShieldCheck className="w-4 h-4 text-slate-400" />
                     <span>Compra Segura</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                    <Award className="w-4 h-4 text-slate-400" />
-                    <span>Sem Fidelidade</span>
-                </div>
               </div>
             </div>
           </div>

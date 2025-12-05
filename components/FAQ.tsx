@@ -43,10 +43,6 @@ const FAQ: React.FC = () => {
       answer: "Ele atua como um primeiro nível de atendimento infalível, filtrando 90% das dúvidas repetitivas e tirando pedidos. Sua equipe foca apenas na produção e casos complexos."
     },
     {
-      question: "Existe fidelidade ou multa?",
-      answer: "Zero. Acreditamos na qualidade do nosso produto. Você assina o plano mensal e pode cancelar quando quiser, sem letras miúdas."
-    },
-    {
       question: "Como funciona a integração com o WhatsApp?",
       answer: "Utilizamos a API oficial para garantir estabilidade. Você conecta seu número (ou um novo) através de um QR Code simples, igual ao WhatsApp Web."
     }
